@@ -134,7 +134,7 @@ INSERT INTO exchange_gift (exchange_gift_id, gift_id, customer_id, quantity) VAL
 (709, 609, 9, 30),
 (710, 610, 10, 20);
 
-INSERT INTO health_info (catinfo_id, cat_id, healthType, description, appointmentDate, admissionDate) VALUES
+INSERT INTO health_info (health_info_id, cat_id, healthType, description, appointmentDate, admissionDate) VALUES
 (9001, 902, 'Vaccination', 'Rabies vaccine', '2023-01-15', '2023-01-15'),
 (9002, 905, 'Illness', 'Minor cold', '2023-02-20', '2023-02-20'),
 (9003, 907, 'Treatment', 'Deworming', '2023-03-10', '2023-03-10'),
@@ -168,7 +168,7 @@ INSERT INTO cat_schedule (cat_schedule_id, schedule_id, cat_id, workDate) VALUES
 (9, 9, 909, '2023-11-05'), -- Tiger works Friday Morning
 (10, 10, 910, '2023-11-05'); -- Coco works Friday Afternoon
 
-INSERT INTO enter_work (employee_id, schedule_id, workDate, enter_work_id) VALUES
+INSERT INTO employee_schedule (employee_id, schedule_id, workDate, employee_schedule_id) VALUES
 (101, 1, '2023-11-01', 'ENT001'),
 (102, 2, '2023-11-01', 'ENT002'), 
 (103, 3, '2023-11-02', 'ENT003'), 

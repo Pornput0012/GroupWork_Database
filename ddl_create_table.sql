@@ -72,15 +72,15 @@ CREATE TABLE `work_schedule` (
 );
 
 -- สร้างตาราง enter_work
-CREATE TABLE `enter_work` (
-  `enter_work_id` VARCHAR(45) NOT NULL,
+CREATE TABLE `employee_schedule` (
+  `employee_schedule_id` VARCHAR(45) NOT NULL,
   `employee_id` INT NOT NULL,
   `schedule_id` INT NOT NULL,
   `workDate` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`enter_work_id`),
-  CONSTRAINT `fk_enter_work_employee`
+  PRIMARY KEY (`employee_schedule_id`),
+  CONSTRAINT `fk_employee_schedule_employee`
     FOREIGN KEY (`employee_id`) REFERENCES `employee` (`employee_id`),
-  CONSTRAINT `fk_enter_work_schedule`
+  CONSTRAINT `fk_employee_schedule_schedule`
     FOREIGN KEY (`schedule_id`) REFERENCES `work_schedule` (`schedule_id`)
 );
 
@@ -130,13 +130,13 @@ CREATE TABLE `order_detail` (
 
 -- สร้างตาราง health_info
 CREATE TABLE `health_info` (
-  `catinfo_id` INT NOT NULL AUTO_INCREMENT,
+  `health_info_id` INT NOT NULL AUTO_INCREMENT,
   `cat_id` INT NOT NULL,
   `healthType` ENUM('Vaccination', 'Illness', 'Treatment', 'Normal') NOT NULL,
   `description` TEXT DEFAULT NULL,
   `appointmentDate` DATE DEFAULT NULL,
   `admissionDate` DATE NOT NULL,
-  PRIMARY KEY (`catinfo_id`),
+  PRIMARY KEY (`health_info_id`),
   CONSTRAINT `fk_health_info_cat`
     FOREIGN KEY (`cat_id`) REFERENCES `cat` (`cat_id`) ON DELETE CASCADE
 );
