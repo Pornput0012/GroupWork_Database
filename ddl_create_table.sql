@@ -110,7 +110,7 @@ CREATE TABLE `exchange_gift` (
 CREATE TABLE `menu` (
   `menu_id` INT NOT NULL AUTO_INCREMENT,
   `menuName` VARCHAR(100) NOT NULL,
-  `category` ENUM('Food', 'Drink', 'Dessert', 'Ticket') NOT NULL,
+  `category` ENUM('Food', 'Drink', 'Dessert') NOT NULL,
   PRIMARY KEY (`menu_id`)
 );
 
@@ -132,7 +132,7 @@ CREATE TABLE `order_detail` (
 CREATE TABLE `health_info` (
   `health_info_id` INT NOT NULL AUTO_INCREMENT,
   `cat_id` INT NOT NULL,
-  `healthType` ENUM('Vaccination', 'Illness', 'Treatment', 'Normal') NOT NULL,
+  `healthType` ENUM('Vaccination', 'Illness', 'Treatment') NOT NULL,
   `description` TEXT DEFAULT NULL,
   `appointmentDate` DATE DEFAULT NULL,
   `admissionDate` DATE NOT NULL,
